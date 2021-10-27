@@ -3,8 +3,11 @@
 function gmarteau_composer_support()
 {
     add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
     add_theme_support('menus');
     register_nav_menu('header', 'Header menu');
+
+    add_image_size('post-thumbnail', 300, 200, true);
 }
 
 function gmarteau_composer_register_assets()
@@ -33,7 +36,60 @@ function gmarteau_composer_menu_link_attributes(array $atts): array
     return $atts;
 }
 
+function gmarteau_composer_init()
+{
+    register_taxonomy('domain', 'project', [
+        'labels' => [
+            'name' => 'Domaine',
+            'singular_name' => 'Domaine',
+            'plural_name' => 'Domaines',
+            'search_items' => 'Rechercher des domaines',
+            'all_items' => 'Tous les domaines',
+            'edit_item' => 'Editer le domaine',
+            'update_item' => 'Mettre à jour le domaine',
+            'add_new_item' => 'Ajouter un nouveau domaine',
+            'new_item_name' => 'Nouveau domaine',
+            'menu_name' => 'Domaine',
+            'not_found' => 'Pas de domaine trouvé'
+        ],
+        'public' => true,
+        'show_in_rest' => true,
+        'hierarchical' => true,
+        'show_admin_column' => true,
+        'rewrite' => [
+            'slug' => 'domain'
+        ]
+    ]);
+    register_post_type('project', [
+        'labels' => [
+            'name' => 'Projet',
+            'singular_name' => 'Projet',
+            'plural_name' => 'Projets',
+            'search_items' => 'Rechercher des projets',
+            'all_items' => 'Tous les projets',
+            'edit_item' => 'Editer le projet',
+            'update_item' => 'Mettre à jour le projet',
+            'add_new_item' => 'Ajouter un nouveau projet',
+            'new_item_name' => 'Nouveau projet',
+            'menu_name' => 'Projet',
+            'not_found' => 'Pas de projet trouvé'
+        ],
+        'description' => 'Projet de musique ou sound design',
+        'taxonomies' => ['domain'],
+        'public' => true,
+        'menu_position' => (int)4,
+        'menu_icon' => 'dashicons-format-audio',
+        'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'rewrite' => [
+            'slug' => 'portfolio'
+        ]
+    ]);
+}
 
+
+add_action('init', 'gmarteau_composer_init');
 add_action('after_setup_theme', 'gmarteau_composer_support');
 add_action('wp_enqueue_scripts', 'gmarteau_composer_register_assets');
 

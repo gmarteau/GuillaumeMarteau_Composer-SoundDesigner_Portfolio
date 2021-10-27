@@ -18,6 +18,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <?php wp_nav_menu([
+                        'theme_location' => 'header',
                         'container' => false,
                         'menu_class' => 'navbar-nav'
                     ])
