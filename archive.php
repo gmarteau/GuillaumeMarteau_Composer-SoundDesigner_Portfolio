@@ -1,3 +1,5 @@
+<?php require_once('inc/archive-url.php'); ?>
+
 <?php get_header(); ?>
 
 <div class="row">
@@ -8,11 +10,11 @@
 <div class="row">
     <ul class="nav nav-pills">
         <li class="nav-item">
-            <a href="<?= get_post_type_archive_link('project'); ?>" class="nav-link">Tous les projets</a>
+            <a href="<?= write_all_url('domain'); ?>" class="nav-link <?= isset($_GET['domain']) ? '' : 'active' ?>">Tous</a>
         </li>
         <?php foreach ($domains as $domain) : ?>
             <li class="nav-item">
-                <a href="<?= get_term_link($domain); ?>" class="nav-link"><?= $domain->name; ?></a>
+                <a href="<?= write_tax_url($domain); ?>" class="nav-link <?= $_GET['domain'] === $domain->slug ? 'active' : '' ?>"><?= $domain->name; ?></a>
             </li>
         <?php endforeach; ?>
     </ul>
@@ -22,11 +24,11 @@
 <div class="row">
     <ul class="nav nav-pills">
         <li class="nav-item">
-            <a href="<?= get_post_type_archive_link('project'); ?>" class="nav-link">Tous les projets</a>
+            <a href="<?= write_all_url('skill'); ?>" class="nav-link <?= isset($_GET['skill']) ? '' : 'active' ?>">Tous</a>
         </li>
         <?php foreach ($skills as $skill) : ?>
             <li class="nav-item">
-                <a href="<?= get_term_link($skill); ?>" class="nav-link"><?= $skill->name; ?></a>
+                <a href="<?= write_tax_url($skill); ?>" class="nav-link <?= $_GET['skill'] === $skill->slug ? 'active' : '' ?>"><?= $skill->name; ?></a>
             </li>
         <?php endforeach; ?>
     </ul>
