@@ -1,0 +1,118 @@
+{
+    "key": "group_617a7f2dabd43",
+    "title": "Project Info",
+    "fields": [
+        {
+            "key": "field_617a8320a6de1",
+            "label": "Vimeo ID",
+            "name": "vimeo_id",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_617a836bfbc39",
+            "label": "Soundcloud ID",
+            "name": "soundcloud_id",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_617a9ff165623",
+            "label": "Soundcloud Title",
+            "name": "soundcloud_title",
+            "type": "text",
+            "instructions": "Name of the song as it appears on the soundcloud page.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_617a836bfbc39",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "My Song Title",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_617aa06d65624",
+            "label": "Soundcloud Slug",
+            "name": "soundcloud_slug",
+            "type": "text",
+            "instructions": "Name as it appears in the soundcloud url.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_617a836bfbc39",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "my-song-title",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1635426525
+}
