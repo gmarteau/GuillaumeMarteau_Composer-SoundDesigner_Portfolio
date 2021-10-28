@@ -60,6 +60,28 @@ function gmarteau_composer_init()
             'slug' => 'domain'
         ]
     ]);
+    register_taxonomy('skill', 'project', [
+        'labels' => [
+            'name' => 'Compétence',
+            'singular_name' => 'Compétence',
+            'plural_name' => 'Compétences',
+            'search_items' => 'Rechercher des compétences',
+            'all_items' => 'Toutes les compétences',
+            'edit_item' => 'Editer la compétence',
+            'update_item' => 'Mettre à jour la compétence',
+            'add_new_item' => 'Ajouter une nouvelle compétence',
+            'new_item_name' => 'Nouvelle compétence',
+            'menu_name' => 'Compétence',
+            'not_found' => 'Pas de compétence trouvée'
+        ],
+        'public' => true,
+        'show_in_rest' => true,
+        'hierarchical' => true,
+        'show_admin_column' => true,
+        'rewrite' => [
+            'slug' => 'skill'
+        ]
+    ]);
     register_post_type('project', [
         'labels' => [
             'name' => 'Projet',
@@ -75,7 +97,7 @@ function gmarteau_composer_init()
             'not_found' => 'Pas de projet trouvé'
         ],
         'description' => 'Projet de musique ou sound design',
-        'taxonomies' => ['domain'],
+        'taxonomies' => ['domain', 'skill'],
         'public' => true,
         'menu_position' => (int)4,
         'menu_icon' => 'dashicons-format-audio',

@@ -18,6 +18,20 @@
     </ul>
 </div>
 
+<?php $skills = get_terms(['taxonomy' => 'skill']); ?>
+<div class="row">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a href="<?= get_post_type_archive_link('project'); ?>" class="nav-link">Tous les projets</a>
+        </li>
+        <?php foreach ($skills as $skill) : ?>
+            <li class="nav-item">
+                <a href="<?= get_term_link($skill); ?>" class="nav-link"><?= $skill->name; ?></a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+
 <?php if (have_posts()) : ?>
     <div class="row">
         <?php while (have_posts()) : the_post() ?>
