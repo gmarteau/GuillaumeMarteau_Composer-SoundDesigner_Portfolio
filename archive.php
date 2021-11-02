@@ -1,6 +1,6 @@
-<?php require_once('inc/archive-url.php'); ?>
-
 <?php get_header(); ?>
+
+<?php require_once('inc/archive-url.php'); ?>
 
 <div class="row">
     <h1 class="col">Voici ce que je fais</h1>
