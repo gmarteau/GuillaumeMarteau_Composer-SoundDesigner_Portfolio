@@ -1,0 +1,15 @@
+.nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    &--footer {
+        justify-content: center;
+    }
+    &__item {
+        color: $clr-text;
+        margin-right: 1rem;
+        &--footer {
+            margin-left: 1rem;
+        }
+    }
+}

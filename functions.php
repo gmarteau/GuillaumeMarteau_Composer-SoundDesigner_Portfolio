@@ -14,13 +14,9 @@ function gmarteau_composer_support()
 function gmarteau_composer_register_assets()
 {
     wp_register_style('gmarteau-composer-style', get_template_directory_uri() . '/style.css');
-    wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');
     wp_register_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
-    wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', [], false, true);
     wp_enqueue_style('gmarteau-composer-style');
-    wp_enqueue_style('bootstrap');
     wp_enqueue_style('font-awesome');
-    wp_enqueue_script('bootstrap');
     if (is_singular('project')) {
         wp_register_script('vimeo', 'https://player.vimeo.com/api/player.js', [], false, true);
         wp_enqueue_script('vimeo');

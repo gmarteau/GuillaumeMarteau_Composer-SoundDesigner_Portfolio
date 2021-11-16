@@ -1,0 +1,19 @@
+.body {
+    background-color: $clr-bg;
+    color: $clr-text;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.header {
+    width: $header-width;
+}
+
+.main {
+    width: $main-width;
+}
+
+.footer {
+    width: $main-width;
+    margin-left: $header-width;
+}
