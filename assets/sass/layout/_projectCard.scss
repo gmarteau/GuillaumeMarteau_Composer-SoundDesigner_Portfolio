@@ -1,0 +1,66 @@
+@use "sass:math";
+
+.projectGrid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 75%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.projectCard {
+    margin-bottom: 20px;
+    position: relative;
+    animation: projectCard-keyframes $project-card-anim-time ease-in-out both;
+    @for $i from 1 through $num-projects {
+        &--#{$i} {
+            animation-delay: $project-card-anim-delay * $i;
+            @if ($i%3 == 0) {
+                width: 100%;
+                height: math.div($project-card-height, 2);
+            } @else if (($i%2 != 0) and ($i%3 != 0)) {
+                width: 49%;
+                height: $project-card-height;
+            } @else if (($i%2 == 0) and ($i%3 != 0)) {
+                width: 49%;
+                height: math.div($project-card-height, 1.2);
+            }
+        }
+    }
+    &__card {
+        width: 100%;
+        height: 100%;
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }    
+    }
+    &__hover {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $clr-bg-hover;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: opacity 200ms ease-in-out;
+        &__title {
+            color: $clr-bg;
+            border: solid 3px $clr-bg;
+            padding: .5rem;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

@@ -2,6 +2,12 @@ $clr-bg: #FFFFF3;
 $clr-text: #153131;
 $clr-dark: #373872;
 $clr-light: #BABBDE;
+$clr-bg-hover: rgba(55, 56, 114, .5);
 
 $header-width: 15%;
 $main-width: 100% - $header-width;
+
+$project-card-height: 500px;
+$num-projects: 10;
+$project-card-anim-time: 1000ms;
+$project-card-anim-delay: 100ms;

@@ -11,15 +11,15 @@
 <body class="body">
     <header class="header">
         <nav class="navbar">
-            <a class="navbar-brand" href="<?= get_home_url() ?>">Navbar</a>
+            <a class="navbar-brand" href="<?= get_home_url() ?>">Guillaume<br />Marteau</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" style="border: solid 2px black;"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="" id="navbarNav">
                 <?php wp_nav_menu([
                     'theme_location' => 'header',
                     'container' => false,
-                    'menu_class' => 'navbar-nav'
+                    'menu_class' => 'headerNav'
                 ])
                 ?>
                 <!-- <ul class="navbar-nav">

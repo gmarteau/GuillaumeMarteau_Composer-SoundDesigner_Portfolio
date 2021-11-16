@@ -2,9 +2,7 @@
     display: flex;
     list-style: none;
     padding: 0;
-    &--footer {
-        justify-content: center;
-    }
+    justify-content: center;
     &__item {
         color: $clr-text;
         margin-right: 1rem;

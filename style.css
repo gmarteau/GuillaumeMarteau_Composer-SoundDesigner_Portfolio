@@ -3,6 +3,22 @@ Theme Name: Composer Portfolio
 Author: Guillaume Marteau
 Description: Made for presenting my composition and sound design for short films works
 */
+@keyframes projectCard-keyframes {
+  0% {
+    opacity: 0;
+  }
+  0%, 25% {
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
 .body {
   background-color: #FFFFF3;
   color: #153131;
@@ -12,10 +28,12 @@ Description: Made for presenting my composition and sound design for short films
 
 .header {
   width: 15%;
+  height: 100vh;
 }
 
 .main {
   width: 85%;
+  padding: 3rem;
 }
 
 .footer {
@@ -28,6 +46,10 @@ Description: Made for presenting my composition and sound design for short films
 }
 * :not(h1, h2, h3, h4, h5, h6) {
   font-family: "Work Sans", sans-serif;
+}
+
+.title {
+  text-align: center;
 }
 
 .link {
@@ -62,8 +84,6 @@ Description: Made for presenting my composition and sound design for short films
   display: flex;
   list-style: none;
   padding: 0;
-}
-.nav--footer {
   justify-content: center;
 }
 .nav__item {
@@ -74,8 +94,113 @@ Description: Made for presenting my composition and sound design for short films
   margin-left: 1rem;
 }
 
-.navbar {
+.headerNav {
+  display: flex;
   flex-direction: column;
+  list-style: none;
+}
+.headerNav__item {
+  margin-bottom: 1rem;
+}
+
+.projectGrid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.projectCard {
+  margin-bottom: 20px;
+  position: relative;
+  animation: projectCard-keyframes 1000ms ease-in-out both;
+}
+.projectCard--1 {
+  animation-delay: 100ms;
+  width: 49%;
+  height: 500px;
+}
+.projectCard--2 {
+  animation-delay: 200ms;
+  width: 49%;
+  height: 416.6666666667px;
+}
+.projectCard--3 {
+  animation-delay: 300ms;
+  width: 100%;
+  height: 250px;
+}
+.projectCard--4 {
+  animation-delay: 400ms;
+  width: 49%;
+  height: 416.6666666667px;
+}
+.projectCard--5 {
+  animation-delay: 500ms;
+  width: 49%;
+  height: 500px;
+}
+.projectCard--6 {
+  animation-delay: 600ms;
+  width: 100%;
+  height: 250px;
+}
+.projectCard--7 {
+  animation-delay: 700ms;
+  width: 49%;
+  height: 500px;
+}
+.projectCard--8 {
+  animation-delay: 800ms;
+  width: 49%;
+  height: 416.6666666667px;
+}
+.projectCard--9 {
+  animation-delay: 900ms;
+  width: 100%;
+  height: 250px;
+}
+.projectCard--10 {
+  animation-delay: 1000ms;
+  width: 49%;
+  height: 416.6666666667px;
+}
+.projectCard__card {
+  width: 100%;
+  height: 100%;
+}
+.projectCard__card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projectCard__hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(55, 56, 114, 0.5);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 200ms ease-in-out;
+}
+.projectCard__hover__title {
+  color: #FFFFF3;
+  border: solid 3px #FFFFF3;
+  padding: 0.5rem;
+}
+.projectCard__hover:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

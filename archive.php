@@ -2,7 +2,7 @@
 
 <?php require_once('inc/archive-url.php'); ?>
 
-<h1>Voici ce que je fais</h1>
+<h1 class="title">Voici ce que je fais</h1>
 
 <?php $domains = get_terms(['taxonomy' => 'domain']); ?>
 <ul class="nav">
@@ -29,10 +29,14 @@
 </ul>
 
 <?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post() ?>
-        <?php get_template_part('template-parts/project/project-card'); ?>
-    <?php endwhile; ?>
-    <?= paginate_links(); ?>
+    <div class="projectGrid">
+        <?php $i = 1; ?>
+        <?php while (have_posts()) : the_post() ?>
+            <?php get_template_part('template-parts/project/project-card', null, ['inc' => $i]); ?>
+            <?php $i++; ?>
+        <?php endwhile; ?>
+        <?= paginate_links(); ?>
+    </div>
 <?php else : ?>
     <p>Rien à voir pour le moment...</p>
 <?php endif; ?>

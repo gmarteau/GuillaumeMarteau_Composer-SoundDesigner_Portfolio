@@ -5,8 +5,10 @@ Description: Made for presenting my composition and sound design for short films
 */
 
 @import "./utils/variables";
+@import "./utils/keyframes";
 @import "./base/base";
 @import "./base/typography";
 @import "./components/link";
 @import "./components/nav";
 @import "./layout/headerNav";
+@import "./layout/projectCard";

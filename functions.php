@@ -8,7 +8,7 @@ function gmarteau_composer_support()
     register_nav_menu('header', 'Header menu');
     register_nav_menu('social', 'Social menu');
 
-    add_image_size('post-thumbnail', 300, 200, true);
+    add_image_size('card-fullwidth', 1000, 300, true);
 }
 
 function gmarteau_composer_register_assets()
@@ -31,13 +31,13 @@ function gmarteau_composer_title_separator(string $sep): string
 
 function gmarteau_composer_menu_css_class(array $classes): array
 {
-    $classes[] = 'nav-item';
+    $classes[] = 'headerNav__item';
     return $classes;
 }
 
 function gmarteau_composer_menu_link_attributes(array $atts): array
 {
-    $atts['class'] = 'nav-link';
+    $atts['class'] = 'link';
     return $atts;
 }
 
