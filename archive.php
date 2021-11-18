@@ -2,8 +2,6 @@
 
 <?php require_once('inc/archive-url.php'); ?>
 
-<h1 class="title">Voici ce que je fais</h1>
-
 <?php $domains = get_terms(['taxonomy' => 'domain']); ?>
 <ul class="nav">
     <li class="nav__item">
@@ -32,6 +30,8 @@
     <div class="projectGrid">
         <?php $i = 1; ?>
         <?php while (have_posts()) : the_post() ?>
+            <?= in_array($i, [2, 5, 10]) ? '<div class="projectGrid__double">' : '' ?>
+            <?= $i % 4 === 0 ? '</div>' : '' ?>
             <?php get_template_part('template-parts/project/project-card', null, ['inc' => $i]); ?>
             <?php $i++; ?>
         <?php endwhile; ?>

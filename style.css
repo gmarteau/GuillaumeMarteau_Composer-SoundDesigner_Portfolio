@@ -3,7 +3,7 @@ Theme Name: Composer Portfolio
 Author: Guillaume Marteau
 Description: Made for presenting my composition and sound design for short films works
 */
-@keyframes projectCard-keyframes {
+@keyframes fade-in-up-keyframes {
   0% {
     opacity: 0;
   }
@@ -42,14 +42,22 @@ Description: Made for presenting my composition and sound design for short films
 }
 
 * {
-  font-family: "Forum", serif;
-}
-* :not(h1, h2, h3, h4, h5, h6) {
   font-family: "Work Sans", sans-serif;
 }
 
 .title {
-  text-align: center;
+  position: relative;
+  width: max-content;
+}
+.title::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 15px;
+  background-color: #BABBDE;
 }
 
 .link {
@@ -112,61 +120,73 @@ Description: Made for presenting my composition and sound design for short films
   margin: auto;
   margin-top: 50px;
 }
+.projectGrid__double {
+  width: 49%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
 
 .projectCard {
-  margin-bottom: 20px;
   position: relative;
-  animation: projectCard-keyframes 1000ms ease-in-out both;
+  animation: fade-in-up-keyframes 1000ms ease-in-out both;
 }
 .projectCard--1 {
   animation-delay: 100ms;
   width: 49%;
   height: 500px;
+  margin-bottom: 19px;
 }
 .projectCard--2 {
   animation-delay: 200ms;
-  width: 49%;
-  height: 416.6666666667px;
+  width: 100%;
+  height: 240.5px;
 }
 .projectCard--3 {
   animation-delay: 300ms;
   width: 100%;
-  height: 250px;
+  height: 240.5px;
 }
 .projectCard--4 {
   animation-delay: 400ms;
-  width: 49%;
-  height: 416.6666666667px;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 19px;
 }
 .projectCard--5 {
   animation-delay: 500ms;
-  width: 49%;
-  height: 500px;
+  width: 100%;
+  height: 240.5px;
 }
 .projectCard--6 {
   animation-delay: 600ms;
   width: 100%;
-  height: 250px;
+  height: 240.5px;
 }
 .projectCard--7 {
   animation-delay: 700ms;
   width: 49%;
   height: 500px;
+  margin-bottom: 19px;
 }
 .projectCard--8 {
   animation-delay: 800ms;
-  width: 49%;
-  height: 416.6666666667px;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 19px;
 }
 .projectCard--9 {
   animation-delay: 900ms;
-  width: 100%;
-  height: 250px;
+  width: 49%;
+  height: 500px;
+  margin-bottom: 19px;
 }
 .projectCard--10 {
   animation-delay: 1000ms;
-  width: 49%;
-  height: 416.6666666667px;
+  width: 100%;
+  height: 240.5px;
 }
 .projectCard__card {
   width: 100%;
@@ -201,6 +221,58 @@ Description: Made for presenting my composition and sound design for short films
 }
 .projectCard__hover:hover {
   opacity: 1;
+}
+.projectCard--singleProject {
+  width: 32%;
+  animation: none;
+}
+
+.project {
+  width: 90%;
+  margin: auto;
+  animation: fade-in-up-keyframes 1500ms ease-out both;
+  margin-bottom: 5rem;
+}
+.project__video {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.project__description {
+  display: flex;
+}
+.project__description__text {
+  width: 50%;
+  padding-right: 6rem;
+}
+.project__description__text__title {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.project__description__text__taxs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+.project__description__text__taxs__item {
+  margin-right: 1rem;
+}
+.project__description__sound {
+  width: 50%;
+}
+.project__more {
+  margin-top: 5rem;
+}
+.project__more__title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.project__more__grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

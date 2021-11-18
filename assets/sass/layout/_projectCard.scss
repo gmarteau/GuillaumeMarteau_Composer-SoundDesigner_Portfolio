@@ -8,24 +8,33 @@
     width: 75%;
     margin: auto;
     margin-top: 50px;
+    &__double {
+        width: 49%;
+        height: $project-card-height;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: $project-card-margin;
+    }
 }
 
 .projectCard {
-    margin-bottom: 20px;
     position: relative;
-    animation: projectCard-keyframes $project-card-anim-time ease-in-out both;
+    animation: fade-in-up-keyframes $project-card-anim-time ease-in-out both;
     @for $i from 1 through $num-projects {
         &--#{$i} {
             animation-delay: $project-card-anim-delay * $i;
-            @if ($i%3 == 0) {
+            @if ($i%4 == 0) {
                 width: 100%;
                 height: math.div($project-card-height, 2);
-            } @else if (($i%2 != 0) and ($i%3 != 0)) {
+                margin-bottom: $project-card-margin;
+            } @else if (($i == 2) or ($i == 3) or ($i == 5) or ($i == 6) or ($i == 10)) {
+                width: 100%;
+                height: math.div($project-card-height, 2) - $project-card-margin-half;
+            } @else {
                 width: 49%;
                 height: $project-card-height;
-            } @else if (($i%2 == 0) and ($i%3 != 0)) {
-                width: 49%;
-                height: math.div($project-card-height, 1.2);
+                margin-bottom: $project-card-margin;
             }
         }
     }
@@ -62,5 +71,9 @@
         &:hover {
             opacity: 1;
         }
+    }
+    &--singleProject {
+        width: 32%;
+        animation: none;
     }
 }

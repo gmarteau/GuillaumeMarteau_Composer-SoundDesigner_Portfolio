@@ -13,8 +13,10 @@ function gmarteau_composer_support()
 
 function gmarteau_composer_register_assets()
 {
-    wp_register_style('gmarteau-composer-style', get_template_directory_uri() . '/style.css');
+    wp_register_style('gfont-work-sans', 'https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+    wp_register_style('gmarteau-composer-style', get_template_directory_uri() . '/style.css', [], rand(111,9999), 'all');
     wp_register_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
+    wp_enqueue_style('gfont-work-sans');
     wp_enqueue_style('gmarteau-composer-style');
     wp_enqueue_style('font-awesome');
     if (is_singular('project')) {
