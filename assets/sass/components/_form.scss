@@ -2,11 +2,21 @@
     &__group {
         display: flex;
         flex-flow: column nowrap;
+        margin-bottom: 1rem;
         &__label {
             margin-bottom: .5rem;
         }
         &__input {
             width: 100%;
+            border: solid 1px $clr-text;
+            background-color: $clr-bg;
+            padding: .5rem;
+            &--textarea {
+                height: 150px;
+            }
+            &:focus {
+                outline: none;
+            }
         }
     }
 }

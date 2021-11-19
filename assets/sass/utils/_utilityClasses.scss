@@ -2,3 +2,10 @@
     display: flex;
     justify-content: center;
 }
+
+.invalid-feedback {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    color: $clr-error;
+    font-size: .8rem;
+}

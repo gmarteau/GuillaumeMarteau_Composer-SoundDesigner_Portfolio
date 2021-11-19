@@ -20,6 +20,13 @@ Description: Made for presenting my composition and sound design for short films
   justify-content: center;
 }
 
+.invalid-feedback {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: red;
+  font-size: 0.8rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -110,20 +117,31 @@ Description: Made for presenting my composition and sound design for short films
 .form__group {
   display: flex;
   flex-flow: column nowrap;
+  margin-bottom: 1rem;
 }
 .form__group__label {
   margin-bottom: 0.5rem;
 }
 .form__group__input {
   width: 100%;
+  border: solid 1px #153131;
+  background-color: #FFFFF3;
+  padding: 0.5rem;
+}
+.form__group__input--textarea {
+  height: 150px;
+}
+.form__group__input:focus {
+  outline: none;
 }
 
 .btn {
-  background-color: #373872;
+  background-color: #BABBDE;
   color: #FFFFF3;
   border: none;
   padding: 0.5rem;
-  box-shadow: 1px 1px 3px #373872;
+  margin-top: 1rem;
+  box-shadow: 1px 1px 3px #BABBDE;
   position: relative;
   z-index: 1;
 }
@@ -134,8 +152,8 @@ Description: Made for presenting my composition and sound design for short films
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #BABBDE;
-  box-shadow: 1px 1px 6px #BABBDE;
+  background-color: #373872;
+  box-shadow: 1px 1px 4px #373872;
   z-index: -1;
   opacity: 0;
   transition: opacity 200ms ease-in-out;
@@ -145,6 +163,16 @@ Description: Made for presenting my composition and sound design for short films
 }
 .btn:hover::after {
   opacity: 1;
+}
+
+.alert {
+  text-align: center;
+}
+.alert--success {
+  color: #BABBDE;
+}
+.alert--error {
+  color: red;
 }
 
 .headerNav {
@@ -328,6 +356,7 @@ Description: Made for presenting my composition and sound design for short films
   width: 90%;
   margin: auto;
   margin-top: 5rem;
+  margin-bottom: 5rem;
   display: flex;
   animation: fade-in-up-keyframes 1500ms ease-out both;
 }
