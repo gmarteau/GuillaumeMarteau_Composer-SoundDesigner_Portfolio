@@ -15,6 +15,11 @@ Description: Made for presenting my composition and sound design for short films
     transform: translateY(0);
   }
 }
+.flex-centered {
+  display: flex;
+  justify-content: center;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -102,6 +107,46 @@ Description: Made for presenting my composition and sound design for short films
   margin-left: 1rem;
 }
 
+.form__group {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.form__group__label {
+  margin-bottom: 0.5rem;
+}
+.form__group__input {
+  width: 100%;
+}
+
+.btn {
+  background-color: #373872;
+  color: #FFFFF3;
+  border: none;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 3px #373872;
+  position: relative;
+  z-index: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #BABBDE;
+  box-shadow: 1px 1px 6px #BABBDE;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+
 .headerNav {
   display: flex;
   flex-direction: column;
@@ -109,6 +154,10 @@ Description: Made for presenting my composition and sound design for short films
 }
 .headerNav__item {
   margin-bottom: 1rem;
+}
+
+.archive__nav {
+  animation: fade-in-up-keyframes 1500ms ease-out both;
 }
 
 .projectGrid {
@@ -131,7 +180,7 @@ Description: Made for presenting my composition and sound design for short films
 
 .projectCard {
   position: relative;
-  animation: fade-in-up-keyframes 1000ms ease-in-out both;
+  animation: fade-in-up-keyframes 1500ms ease-in-out both;
 }
 .projectCard--1 {
   animation-delay: 100ms;
@@ -273,6 +322,32 @@ Description: Made for presenting my composition and sound design for short films
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
+}
+
+.contact {
+  width: 90%;
+  margin: auto;
+  margin-top: 5rem;
+  display: flex;
+  animation: fade-in-up-keyframes 1500ms ease-out both;
+}
+.contact__title {
+  animation: fade-in-up-keyframes 1500ms ease-out both;
+}
+.contact__text {
+  width: 50%;
+  padding-right: 6rem;
+}
+.contact__text h2 {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+.contact__text p {
+  line-height: 1.5;
+}
+.contact__form {
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+.form {
+    &__group {
+        display: flex;
+        flex-flow: column nowrap;
+        &__label {
+            margin-bottom: .5rem;
+        }
+        &__input {
+            width: 100%;
+        }
+    }
+}

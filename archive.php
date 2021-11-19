@@ -2,29 +2,31 @@
 
 <?php require_once('inc/archive-url.php'); ?>
 
-<?php $domains = get_terms(['taxonomy' => 'domain']); ?>
-<ul class="nav">
-    <li class="nav__item">
-        <a href="<?= write_all_url('domain'); ?>" class="link <?= isset($_GET['domain']) ? '' : 'active' ?>">Tous</a>
-    </li>
-    <?php foreach ($domains as $domain) : ?>
+<div class="archive__nav">
+    <?php $domains = get_terms(['taxonomy' => 'domain']); ?>
+    <ul class="nav">
         <li class="nav__item">
-            <a href="<?= write_tax_url($domain); ?>" class="link <?= $_GET['domain'] === $domain->slug ? 'active' : '' ?>"><?= $domain->name; ?></a>
+            <a href="<?= write_all_url('domain'); ?>" class="link <?= isset($_GET['domain']) ? '' : 'active' ?>">Tous</a>
         </li>
-    <?php endforeach; ?>
-</ul>
+        <?php foreach ($domains as $domain) : ?>
+            <li class="nav__item">
+                <a href="<?= write_tax_url($domain); ?>" class="link <?= $_GET['domain'] === $domain->slug ? 'active' : '' ?>"><?= $domain->name; ?></a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
 
-<?php $skills = get_terms(['taxonomy' => 'skill']); ?>
-<ul class="nav">
-    <li class="nav__item">
-        <a href="<?= write_all_url('skill'); ?>" class="link <?= isset($_GET['skill']) ? '' : 'active' ?>">Tous</a>
-    </li>
-    <?php foreach ($skills as $skill) : ?>
+    <?php $skills = get_terms(['taxonomy' => 'skill']); ?>
+    <ul class="nav">
         <li class="nav__item">
-            <a href="<?= write_tax_url($skill); ?>" class="link <?= $_GET['skill'] === $skill->slug ? 'active' : '' ?>"><?= $skill->name; ?></a>
+            <a href="<?= write_all_url('skill'); ?>" class="link <?= isset($_GET['skill']) ? '' : 'active' ?>">Tous</a>
         </li>
-    <?php endforeach; ?>
-</ul>
+        <?php foreach ($skills as $skill) : ?>
+            <li class="nav__item">
+                <a href="<?= write_tax_url($skill); ?>" class="link <?= $_GET['skill'] === $skill->slug ? 'active' : '' ?>"><?= $skill->name; ?></a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
 
 <?php if (have_posts()) : ?>
     <div class="projectGrid">

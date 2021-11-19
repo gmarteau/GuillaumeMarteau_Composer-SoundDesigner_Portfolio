@@ -1,7 +1,7 @@
 .project {
     width: 90%;
     margin: auto;
-    animation: fade-in-up-keyframes $project-card-anim-time*1.5 ease-out both;
+    animation: fade-in-up-keyframes $project-card-anim-time ease-out both;
     margin-bottom: 5rem;
     &__video {
         margin-top: 5rem;

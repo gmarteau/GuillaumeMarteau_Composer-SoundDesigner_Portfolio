@@ -1,0 +1,14 @@
+.title {
+    position: relative;
+    width: max-content;
+    &::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 15px;
+        background-color: $clr-light;
+    }
+}
