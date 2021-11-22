@@ -57,6 +57,45 @@ Description: Made for presenting my composition and sound design for short films
   font-family: "Work Sans", sans-serif;
 }
 
+.toggler {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  cursor: pointer;
+}
+.toggler__bar {
+  background: #153131;
+  border-radius: 10px;
+  height: 5px;
+  margin: 4px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.toggler__bar:nth-of-type(1) {
+  width: 50%;
+}
+.toggler__bar:nth-of-type(2) {
+  width: 100%;
+}
+.toggler__bar:nth-of-type(3) {
+  width: 75%;
+}
+.toggler__checkbox {
+  display: none;
+}
+.toggler__checkbox:checked ~ .toggler__bar:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(4px, 0px);
+}
+.toggler__checkbox:checked ~ .toggler__bar:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+.toggler__checkbox:checked ~ .toggler__bar:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(18px, -8px) rotatez(45deg);
+}
+
 .title {
   position: relative;
   width: max-content;
