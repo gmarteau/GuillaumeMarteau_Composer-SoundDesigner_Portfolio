@@ -10,6 +10,8 @@ $clr-error: red;
 $header-width: 15%;
 $main-width: 100% - $header-width;
 
+$num-services: 3;
+
 $project-card-height: 500px;
 $project-card-margin: 19px;
 $project-card-margin-half: math.div($project-card-margin, 2);

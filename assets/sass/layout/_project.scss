@@ -1,6 +1,5 @@
 .project {
-    width: 90%;
-    margin: auto;
+    @include recentered-section;
     animation: fade-in-up-keyframes $project-card-anim-time ease-out both;
     margin-bottom: 5rem;
     &__video {

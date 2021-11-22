@@ -1,6 +1,5 @@
 .contact {
-    width: 90%;
-    margin: auto;
+    @include recentered-section;
     margin-top: 5rem;
     margin-bottom: 5rem;
     display: flex;

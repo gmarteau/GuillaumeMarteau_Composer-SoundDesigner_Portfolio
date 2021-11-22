@@ -1,0 +1,25 @@
+.home {
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include recentered-section;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        animation: fade-in-up-keyframes $project-card-anim-time ease-in-out both;
+    }
+    &__services {
+        @include recentered-section;
+        text-align: center;
+        margin-bottom: 3rem;
+        animation: fade-in-up-keyframes $project-card-anim-time ease-in-out both;
+        &__list {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+    }
+}

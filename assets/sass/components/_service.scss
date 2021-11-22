@@ -1,0 +1,13 @@
+.service {
+    width: 32%;
+    animation: fade-in-up-keyframes $project-card-anim-time ease-in-out both;
+    &__description {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    @for $i from 1 through $num-services {
+        &--#{$i} {
+            animation-delay: $project-card-anim-delay * $i;
+        }
+    }
+}
