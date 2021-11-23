@@ -12,23 +12,27 @@
 
 <body class="body">
     <header class="header">
-        <nav class="navbar">
-            <a class="navbar-brand" href="<?= get_home_url() ?>">Guillaume<br />Marteau</a>
+        <nav class="header__nav">
+            <a class="header__nav__brand" href="<?= get_home_url() ?>">Guillaume<br />Marteau</a>
 
-            <label class="toggler" for="navToggler">
+            <!-- <label class="toggler" for="navToggler">
                 <input class="toggler__checkbox" type="checkbox" id="navToggler"/> 
                 <span class="toggler__bar"></span>
                 <span class="toggler__bar"></span>
                 <span class="toggler__bar"></span>
-            </label>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="border: solid 2px black;"></span>
-            </button>
-            <div class="" id="navbarNav">
+            </label> -->
+
+            <div class="toggler">
+                <span class="toggler__bar"></span>
+                <span class="toggler__bar"></span>
+                <span class="toggler__bar"></span>
+            </div>
+
+            <div class="mainNav">
                 <?php wp_nav_menu([
                     'theme_location' => 'header',
                     'container' => false,
-                    'menu_class' => 'headerNav'
+                    'menu_class' => 'mainNav__nav'
                 ])
                 ?>
             </div>

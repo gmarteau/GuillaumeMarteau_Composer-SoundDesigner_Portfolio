@@ -7,6 +7,7 @@
     color: $clr-text;
     display: flex;
     flex-flow: row wrap;
+    overflow-x: hidden;
 }
 
 .header {
@@ -17,6 +18,11 @@
 .main {
     width: $main-width;
     padding: 3rem;
+    @include menu-expand-transition;
+    transform: translateX(0);
+    &.menu-expanded {
+        transform: translateX(100%);
+    }
 }
 
 .footer {

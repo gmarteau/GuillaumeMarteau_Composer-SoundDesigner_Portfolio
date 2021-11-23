@@ -1,5 +1,6 @@
 .archive {
     &__nav {
+        margin-bottom: 4rem;
         animation: fade-in-up-keyframes $project-card-anim-time ease-out both;
     }
 }

@@ -5,8 +5,7 @@
     cursor: pointer;
     &__bar {
         background: $clr-text;
-        border-radius: 10px;
-        height: 5px;
+        height: 4px;
         margin: 4px 0;
         transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
         &:nth-of-type(1) {
@@ -19,23 +18,20 @@
             width: 75%;
         }
     }
-    &__checkbox {
-        display: none;
-        &:checked {
-            & ~ .toggler__bar {
-                &:nth-of-type(1) {
-                    transform-origin: bottom;
-                    transform: rotatez(45deg) translate(4px,0px);
-                }
-                &:nth-of-type(2) {
-                    transform-origin: top;
-                    transform: rotatez(-45deg);
-                }
-                &:nth-of-type(3) {
-                    transform-origin:bottom;
-                    width:50%;
-                    transform: translate(18px,-8px) rotatez(45deg);
-                }
+    &.toggled {
+        & > .toggler__bar {
+            &:nth-of-type(1) {
+                transform-origin: bottom;
+                transform: rotatez(45deg) translate(4px,0px);
+            }
+            &:nth-of-type(2) {
+                transform-origin: top;
+                transform: rotatez(-45deg);
+            }
+            &:nth-of-type(3) {
+                transform-origin:bottom;
+                width:50%;
+                transform: translate(18px,-7px) rotatez(45deg);
             }
         }
     }

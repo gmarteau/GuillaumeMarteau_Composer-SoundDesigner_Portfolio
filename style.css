@@ -36,6 +36,7 @@ Description: Made for presenting my composition and sound design for short films
   color: #153131;
   display: flex;
   flex-flow: row wrap;
+  overflow-x: hidden;
 }
 
 .header {
@@ -46,6 +47,12 @@ Description: Made for presenting my composition and sound design for short films
 .main {
   width: 85%;
   padding: 3rem;
+  transform-origin: left;
+  transition: transform 1000ms ease-in-out;
+  transform: translateX(0);
+}
+.main.menu-expanded {
+  transform: translateX(100%);
 }
 
 .footer {
@@ -65,8 +72,7 @@ Description: Made for presenting my composition and sound design for short films
 }
 .toggler__bar {
   background: #153131;
-  border-radius: 10px;
-  height: 5px;
+  height: 4px;
   margin: 4px 0;
   transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
@@ -79,21 +85,18 @@ Description: Made for presenting my composition and sound design for short films
 .toggler__bar:nth-of-type(3) {
   width: 75%;
 }
-.toggler__checkbox {
-  display: none;
-}
-.toggler__checkbox:checked ~ .toggler__bar:nth-of-type(1) {
+.toggler.toggled > .toggler__bar:nth-of-type(1) {
   transform-origin: bottom;
   transform: rotatez(45deg) translate(4px, 0px);
 }
-.toggler__checkbox:checked ~ .toggler__bar:nth-of-type(2) {
+.toggler.toggled > .toggler__bar:nth-of-type(2) {
   transform-origin: top;
   transform: rotatez(-45deg);
 }
-.toggler__checkbox:checked ~ .toggler__bar:nth-of-type(3) {
+.toggler.toggled > .toggler__bar:nth-of-type(3) {
   transform-origin: bottom;
   width: 50%;
-  transform: translate(18px, -8px) rotatez(45deg);
+  transform: translate(18px, -7px) rotatez(45deg);
 }
 
 .title {
@@ -155,6 +158,9 @@ Description: Made for presenting my composition and sound design for short films
 }
 .link.active::after {
   transform: scaleX(1);
+}
+.link--header::after {
+  bottom: 0;
 }
 .link--footer {
   color: #153131;
@@ -235,13 +241,34 @@ Description: Made for presenting my composition and sound design for short films
   color: red;
 }
 
-.headerNav {
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+.header__nav__brand {
+  margin-bottom: 2rem;
+}
+
+.mainNav {
+  width: 100vw;
+  transform: translateX(-100%);
+  transform-origin: left;
+  transition: transform 1000ms ease-in-out;
+}
+.mainNav.expanded {
+  transform: translateX(60%);
+}
+.mainNav__nav {
   display: flex;
   flex-direction: column;
   list-style: none;
 }
-.headerNav__item {
-  margin-bottom: 1rem;
+.mainNav__nav__item {
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 .home__title {
@@ -271,6 +298,7 @@ Description: Made for presenting my composition and sound design for short films
 }
 
 .archive__nav {
+  margin-bottom: 4rem;
   animation: fade-in-up-keyframes 1500ms ease-out both;
 }
 
@@ -463,6 +491,10 @@ Description: Made for presenting my composition and sound design for short films
 }
 .contact__form {
   width: 50%;
+}
+
+.footer {
+  padding-bottom: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

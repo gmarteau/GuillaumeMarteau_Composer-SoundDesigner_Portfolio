@@ -25,6 +25,11 @@
             transform: scaleX(1);
         }
     }
+    &--header {
+        &::after {
+            bottom: 0;
+        }
+    }
     &--footer {
         color: $clr-text;
     }

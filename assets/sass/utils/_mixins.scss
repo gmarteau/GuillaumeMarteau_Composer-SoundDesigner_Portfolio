@@ -2,3 +2,8 @@
     width: 90%;
     margin: auto;
 }
+
+@mixin menu-expand-transition {
+    transform-origin: left;
+    transition: transform 1000ms ease-in-out;
+}

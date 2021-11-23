@@ -1,0 +1,17 @@
+.mainNav {
+    width: 100vw;
+    transform: translateX(-100%);
+    @include menu-expand-transition;
+    &.expanded {
+        transform: translateX(60%);
+    }
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        &__item {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+    }
+}
