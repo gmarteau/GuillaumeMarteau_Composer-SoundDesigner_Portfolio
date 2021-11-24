@@ -2,8 +2,16 @@
     width: 100vw;
     transform: translateX(-100%);
     @include menu-expand-transition;
+    @include no-desktop {
+        transform: translateX(0);
+        transform-origin: right;
+        margin-top: 100px;
+    }
     &.expanded {
         transform: translateX(60%);
+        @include no-desktop {
+            transform: translateX(-100%);
+        }
     }
     &__nav {
         display: flex;
@@ -11,7 +19,6 @@
         list-style: none;
         &__item {
             margin-bottom: 2rem;
-            font-size: 2rem;
         }
     }
 }

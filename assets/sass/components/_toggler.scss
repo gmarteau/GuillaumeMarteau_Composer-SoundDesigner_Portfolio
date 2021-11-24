@@ -3,6 +3,11 @@
     flex-direction: column;
     width: 40px;
     cursor: pointer;
+    @include no-desktop {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
     &__bar {
         background: $clr-text;
         height: 4px;

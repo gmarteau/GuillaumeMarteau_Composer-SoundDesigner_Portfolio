@@ -6,11 +6,15 @@
     <?php $domains = get_terms(['taxonomy' => 'domain']); ?>
     <ul class="nav">
         <li class="nav__item">
-            <a href="<?= write_all_url('domain'); ?>" class="link <?= isset($_GET['domain']) ? '' : 'active' ?>">Tous</a>
+            <a href="<?= write_all_url('domain'); ?>" class="link--upper <?= isset($_GET['domain']) ? '' : 'active' ?>">
+                <?= strtoupper('tous'); ?>
+            </a>
         </li>
         <?php foreach ($domains as $domain) : ?>
             <li class="nav__item">
-                <a href="<?= write_tax_url($domain); ?>" class="link <?= $_GET['domain'] === $domain->slug ? 'active' : '' ?>"><?= $domain->name; ?></a>
+                <a href="<?= write_tax_url($domain); ?>" class="link--upper <?= $_GET['domain'] === $domain->slug ? 'active' : '' ?>">
+                    <?= strtoupper($domain->name); ?>
+                </a>
             </li>
         <?php endforeach; ?>
     </ul>
@@ -18,11 +22,15 @@
     <?php $skills = get_terms(['taxonomy' => 'skill']); ?>
     <ul class="nav">
         <li class="nav__item">
-            <a href="<?= write_all_url('skill'); ?>" class="link <?= isset($_GET['skill']) ? '' : 'active' ?>">Tous</a>
+            <a href="<?= write_all_url('skill'); ?>" class="link--upper <?= isset($_GET['skill']) ? '' : 'active' ?>">
+                <?= strtoupper('tous'); ?>
+            </a>
         </li>
         <?php foreach ($skills as $skill) : ?>
             <li class="nav__item">
-                <a href="<?= write_tax_url($skill); ?>" class="link <?= $_GET['skill'] === $skill->slug ? 'active' : '' ?>"><?= $skill->name; ?></a>
+                <a href="<?= write_tax_url($skill); ?>" class="link--upper <?= $_GET['skill'] === $skill->slug ? 'active' : '' ?>">
+                    <?= strtoupper($skill->name); ?>
+                </a>
             </li>
         <?php endforeach; ?>
     </ul>

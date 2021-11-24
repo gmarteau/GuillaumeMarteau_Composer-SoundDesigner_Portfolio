@@ -5,8 +5,20 @@
         justify-content: center;
         align-items: center;
         padding-top: 2rem;
+        @include no-desktop {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+        }
         &__brand {
             margin-bottom: 2rem;
+            @include no-desktop {
+                margin: 0;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
         }
     }
 }

@@ -8,11 +8,19 @@
     display: flex;
     flex-flow: row wrap;
     overflow-x: hidden;
+    @include no-desktop {
+        flex-flow: row nowrap;
+    }
 }
 
 .header {
     width: $header-width;
     height: 100vh;
+    @include no-desktop {
+        min-width: 100%;
+        height: auto;
+        order: 2;
+    }
 }
 
 .main {
@@ -20,8 +28,19 @@
     padding: 3rem;
     @include menu-expand-transition;
     transform: translateX(0);
+    @include no-desktop {
+        min-width: 100%;
+        order: 1;
+        transform-origin: right;
+        overflow-x: hidden;
+        margin-top: 8rem;
+        padding: 0;
+    }
     &.menu-expanded {
         transform: translateX(100%);
+        @include no-desktop {
+            transform: translateX(-100%);
+        }
     }
 }
 

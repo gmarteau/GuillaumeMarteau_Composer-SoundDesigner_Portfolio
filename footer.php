@@ -7,22 +7,8 @@
         foreach ($socials as $social) :
         ?>
             <li class="nav__item nav__item--footer">
-                <a href="<?= $social->url; ?>" class="link--footer" target="_blank" rel="noopener noreferrer">
-                    <?php
-                    $title = $social->title;
-                    if (str_contains($title, 'soundcloud')) :
-                    ?>
-                        <i class="fab fa-soundcloud fa-2x"></i>
-                    <?php elseif (str_contains($title, 'facebook')) : ?>
-                        <i class="fab fa-facebook-f fa-2x"></i>
-                    <?php elseif (str_contains($title, 'linkedin')) : ?>
-                        <i class="fab fa-linkedin-in fa-2x"></i>
-                    <?php elseif (str_contains($title, 'youtube')) : ?>
-                        <i class="fab fa-youtube fa-2x"></i>
-                    <?php elseif (str_contains($title, 'vimeo')) : ?>
-                        <i class="fab fa-vimeo-v fa-2x"></i>
-                    <?php else : echo $title; ?>
-                    <?php endif; ?>
+                <a href="<?= $social->url; ?>" class="link--upper" target="_blank" rel="noopener noreferrer">
+                    <?= strtoupper($social->title) ?>
                 </a>
             </li>
         <?php endforeach; ?>

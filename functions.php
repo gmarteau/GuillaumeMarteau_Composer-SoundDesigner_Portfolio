@@ -15,12 +15,10 @@ function gmarteau_composer_register_assets()
 {
     wp_register_style('gfont-work-sans', 'https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
     wp_register_style('gmarteau-composer-style', get_template_directory_uri() . '/style.css', [], rand(111,9999), 'all');
-    wp_register_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
     wp_register_script('jquery-min', 'https://code.jquery.com/jquery-3.6.0.min.js', [], false, true);
     wp_register_script('nav-toggle', get_template_directory_uri() . '/assets/js/nav-toggle.js', ['jquery-min'], false, true);
     wp_enqueue_style('gfont-work-sans');
     wp_enqueue_style('gmarteau-composer-style');
-    wp_enqueue_style('font-awesome');
     wp_enqueue_script('nav-toggle');
     if (is_singular('project')) {
         wp_register_script('vimeo', 'https://player.vimeo.com/api/player.js', [], false, true);
@@ -32,18 +30,6 @@ function gmarteau_composer_title_separator(string $sep): string
 {
     $sep = '|';
     return $sep;
-}
-
-function gmarteau_composer_menu_css_class(array $classes): array
-{
-    $classes[] = 'mainNav__nav__item';
-    return $classes;
-}
-
-function gmarteau_composer_menu_link_attributes(array $atts): array
-{
-    $atts['class'] = 'link link--header';
-    return $atts;
 }
 
 function gmarteau_composer_init()
@@ -126,5 +112,3 @@ add_action('after_setup_theme', 'gmarteau_composer_support');
 add_action('wp_enqueue_scripts', 'gmarteau_composer_register_assets');
 
 add_filter('document_title_separator', 'gmarteau_composer_title_separator');
-add_filter('nav_menu_css_class', 'gmarteau_composer_menu_css_class');
-add_filter('nav_menu_link_attributes', 'gmarteau_composer_menu_link_attributes');
