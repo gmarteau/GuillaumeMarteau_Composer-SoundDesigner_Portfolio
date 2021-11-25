@@ -33,15 +33,15 @@
         }
     }
     &--upper {
-        color: $clr-text-light;
+        color: $clr-text;
         text-decoration: none;
         letter-spacing: .2em;
         font-size: .8em;
         &:hover {
-            color: $clr-text;
+            color: $clr-dark;
         }
         &.active {
-            color: $clr-text;
+            color: $clr-dark;
         }
     }
 }

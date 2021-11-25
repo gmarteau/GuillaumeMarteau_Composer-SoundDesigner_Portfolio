@@ -22,14 +22,14 @@
                         <?php if ($domains) : ?>
                             <?php foreach ($domains as $domain) : ?>
                                 <li class="project__description__text__taxs__item">
-                                    <a href="<?= get_term_link($domain->term_id); ?>" class="link"><?= $domain->name ?></a>
+                                    <a href="<?= get_term_link($domain->term_id); ?>" class="link--upper"><?= $domain->name ?></a>
                                 </li>
                             <?php endforeach; ?>
                         <?php endif; ?>
                         <?php if ($skills) : ?>
                             <?php foreach ($skills as $skill) : ?>
                                 <li class="project__description__text__taxs__item">
-                                    <a href="<?= get_term_link($skill->term_id); ?>" class="link"><?= $skill->name ?></a>
+                                    <a href="<?= get_term_link($skill->term_id); ?>" class="link--upper"><?= $skill->name ?></a>
                                 </li>
                             <?php endforeach; ?>
                         <?php endif; ?>

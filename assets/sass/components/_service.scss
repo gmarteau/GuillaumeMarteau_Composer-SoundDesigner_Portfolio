@@ -11,6 +11,7 @@
     &__description {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+        margin: 0;
     }
     @for $i from 1 through $num-services {
         &--#{$i} {

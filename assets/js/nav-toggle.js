@@ -5,4 +5,4 @@ $(document).ready(function() {
         $('.mainNav').toggleClass('expanded');
         $('.main').toggleClass('menu-expanded');
     });
-})
+});

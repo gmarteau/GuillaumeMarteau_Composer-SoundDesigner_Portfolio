@@ -11,7 +11,7 @@
 
 <?php while (have_posts()) : the_post() ?>
     <div class="contact__title flex-centered">
-        <h1 class="title"><?php the_title() ?></h1>
+        <h1 class="title title--big"><?php the_title() ?></h1>
     </div>
 
     <div class="contact">

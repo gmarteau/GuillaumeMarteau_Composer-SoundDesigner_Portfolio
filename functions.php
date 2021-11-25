@@ -24,6 +24,10 @@ function gmarteau_composer_register_assets()
         wp_register_script('vimeo', 'https://player.vimeo.com/api/player.js', [], false, true);
         wp_enqueue_script('vimeo');
     }
+    if (is_archive()) {
+        wp_register_script('img-filter-hover', get_template_directory_uri() . '/assets/js/img-filter-hover.js', ['jquery-min'], false, true);
+        wp_enqueue_script('img-filter-hover');
+    }
 }
 
 function gmarteau_composer_title_separator(string $sep): string

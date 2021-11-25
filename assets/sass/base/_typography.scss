@@ -1,13 +1,19 @@
 * {
     font-family: 'Work Sans', sans-serif;
-    &:not(h1, h2) {
+    &:not(h1, h2, h3) {
         font-size: 1em;
     }
 }
 
-h1, h2, .mainNav__nav__item {
+h1, h2, h3, .mainNav__nav__item {
     font-size: 2em;
     font-weight: normal;
+}
+
+.home__title h2 {
+    font-size: 1em;
+    letter-spacing: .2em;
+    margin-top: 0;
 }
 
 p {
