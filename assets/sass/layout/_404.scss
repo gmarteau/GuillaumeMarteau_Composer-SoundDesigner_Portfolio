@@ -1,0 +1,11 @@
+.fourofour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    &__redirect {
+        text-decoration: none;
+        color: $clr-dark;
+        margin-top: 5rem;
+    }
+}
