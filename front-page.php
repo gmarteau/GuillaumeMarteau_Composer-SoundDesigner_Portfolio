@@ -32,6 +32,44 @@
             </li>        
         </ul>
     </div>
+
+    <div class="about">
+        <div class="about__title">
+            <h3 class="title">Mon parcours</h3>
+        </div>
+
+        <div class="about__content">
+            <div class="about__content__timeline">
+                <ul class="about__content__timeline__moments">
+                    <?php
+                    $file_location = get_template_directory_uri() . '/assets/json/timeline-keys.json';
+                    $json_file_content = file_get_contents($file_location);
+                    $moments = json_decode($json_file_content, true);
+                    foreach ($moments as $moment) : 
+                    ?>
+                        <li class="about__content__timeline__moments__moment">
+                            <p class="about__content__timeline__moments__moment__date"><?= $moment['date'] ?></p>
+                            <div class="about__content__timeline__moments__moment__icon" aria-hidden="true"></div>
+                            <p class="about__content__timeline__moments__moment__caption"><?= $moment['caption'] ?></p>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+
+            <div class="about__content__bio">
+                <p class="about__content__bio__text">
+                    <?= get_field('bio'); ?>
+                </p>
+
+                <?php if ($spotify = get_field('spotify_embed')) : ?>
+                    <div class="about__content__bio__spotify">
+                        <h4 class="title">Mon dernier projet perso</h4>
+                        <iframe src="<?= $spotify ?>" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

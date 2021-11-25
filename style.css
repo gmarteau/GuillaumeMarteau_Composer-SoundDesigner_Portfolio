@@ -93,7 +93,7 @@ Description: Made for presenting my composition and sound design for short films
   font-size: 1em;
 }
 
-h1, h2, h3, .mainNav__nav__item {
+h1, h2, h3, h4, .mainNav__nav__item {
   font-size: 2em;
   font-weight: normal;
 }
@@ -432,6 +432,105 @@ p {
   .home__services__list {
     flex-direction: column;
   }
+}
+
+.about {
+  width: 90%;
+  margin: auto;
+  animation: fade-in-up-keyframes 2250ms ease-in-out both;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+.about__title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.about__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.about__content__timeline {
+  width: 48%;
+}
+.about__content__timeline__moments {
+  list-style: none;
+  padding: 0;
+}
+.about__content__timeline__moments__moment {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+}
+.about__content__timeline__moments__moment p {
+  margin: 0;
+}
+.about__content__timeline__moments__moment__date {
+  min-width: 40px;
+  transform: translateX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in-out;
+}
+.about__content__timeline__moments__moment__icon {
+  min-width: 30px;
+  width: 30px;
+  min-height: 30px;
+  height: 30px;
+  border: solid 1px #CAA8F5;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+.about__content__timeline__moments__moment__icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #CAA8F5;
+  border: solid 1px #CAA8F5;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+.about__content__timeline__moments__moment__caption {
+  color: #CAA8F5;
+  position: relative;
+  transition: color 250ms ease-in-out;
+}
+.about__content__timeline__moments__moment__caption::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #CAA8F5;
+  position: absolute;
+  top: 30px;
+  left: -35px;
+}
+.about__content__timeline__moments__moment:last-child > .about__content__timeline__moments__moment__caption::before {
+  height: 0;
+}
+.about__content__timeline__moments__moment:hover > .about__content__timeline__moments__moment__date {
+  transform: translateX(-50%);
+}
+.about__content__timeline__moments__moment:hover > .about__content__timeline__moments__moment__icon::after {
+  opacity: 1;
+}
+.about__content__timeline__moments__moment:hover > .about__content__timeline__moments__moment__caption {
+  color: #153131;
+}
+.about__content__bio {
+  width: 48%;
+}
+.about__content__bio__text {
+  width: 100%;
+}
+.about__content__bio__spotify {
+  margin-top: 4rem;
 }
 
 .archive__nav {

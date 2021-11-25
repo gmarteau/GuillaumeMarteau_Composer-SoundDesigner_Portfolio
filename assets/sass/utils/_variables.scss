@@ -19,3 +19,8 @@ $project-card-margin-half: math.div($project-card-margin, 2);
 $num-projects: 10;
 $project-card-anim-time: 1500ms;
 $project-card-anim-delay: 100ms;
+
+$timeline-dot-size: 30px;
+$timeline-dot-margin: 20px;
+$timeline-bar-offset: -($timeline-dot-margin + math.div($timeline-dot-size, 2));
+$timeline-bloc-padding: 30px;

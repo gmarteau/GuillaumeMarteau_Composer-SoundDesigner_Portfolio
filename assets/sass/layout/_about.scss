@@ -1,0 +1,105 @@
+.about {
+    @include recentered-section;
+    animation: fade-in-up-keyframes $project-card-anim-time*1.5 ease-in-out both;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    &__title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;    
+        &__timeline {
+            width: 48%;
+            &__moments {
+                list-style: none;
+                padding: 0;
+                &__moment {
+                    display: flex;
+                    justify-content: flex-start;
+                    padding-bottom: $timeline-bloc-padding;
+                    & p {
+                        margin: 0;
+                    }
+                    &__date {
+                        min-width: 40px;
+                        transform: translateX(0);
+                        transform-origin: right;
+                        transition: transform 250ms ease-in-out;
+                    }
+                    &__icon {
+                        min-width: $timeline-dot-size;
+                        width: $timeline-dot-size;
+                        min-height: $timeline-dot-size;
+                        height: $timeline-dot-size;
+                        border: solid 1px $clr-dark;
+                        border-radius: 50%;
+                        margin-left: $timeline-dot-margin;
+                        margin-right: $timeline-dot-margin;
+                        position: relative;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: $clr-dark;
+                            border: solid 1px $clr-dark;
+                            border-radius: 50%;
+                            opacity: 0;
+                            transition: opacity 250ms ease-in-out;
+                        }
+                    }
+                    &__caption {
+                        color: $clr-dark;
+                        position: relative;
+                        transition: color 250ms ease-in-out;
+                        &::before {
+                            content: '';
+                            width: 1px;
+                            height: 100%;
+                            background-color: $clr-dark;
+                            position: absolute;
+                            top: 30px;
+                            left: $timeline-bar-offset;
+                        }
+                    }
+                    &:last-child {
+                        & > .about__content__timeline__moments__moment__caption {
+                            &::before {
+                                height: 0;
+                            }
+                        }
+                    }
+                    &:hover {
+                        & > .about__content__timeline__moments__moment__date {
+                            transform: translateX(-50%);
+                        }
+                        & > .about__content__timeline__moments__moment__icon {
+                            &::after {
+                                opacity: 1;
+                            }
+                        }
+                        & > .about__content__timeline__moments__moment__caption {
+                            color: $clr-text;
+                        }
+                    }
+                }
+            }
+        }
+        &__bio {
+            width: 48%;
+            &__text {
+                width: 100%;
+            }
+            &__spotify {
+                margin-top: 4rem;
+            }
+        }
+    }
+}

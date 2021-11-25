@@ -1,0 +1,63 @@
+{
+    "key": "group_619f9276d0795",
+    "title": "Bio",
+    "fields": [
+        {
+            "key": "field_619f927e81388",
+            "label": "Bio",
+            "name": "bio",
+            "type": "textarea",
+            "instructions": "Courte biographie.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_619fb13b39ff3",
+            "label": "Spotify Embed",
+            "name": "spotify_embed",
+            "type": "text",
+            "instructions": "Lien vers le morceau ou l'album sur Spotify.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "58"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1637856332
+}
