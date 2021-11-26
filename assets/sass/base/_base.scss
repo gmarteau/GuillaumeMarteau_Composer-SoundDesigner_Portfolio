@@ -5,9 +5,15 @@
 .body {
     background-color: $clr-bg;
     color: $clr-text;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden!important;
+}
+
+.wrapper {
     display: flex;
     flex-flow: row wrap;
-    max-width: 100%;
+    width: 100%;
     margin: 0;
     overflow-x: hidden!important;
     @include no-desktop {

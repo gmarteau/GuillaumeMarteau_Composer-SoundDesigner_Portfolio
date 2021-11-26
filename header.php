@@ -11,32 +11,33 @@
 </head>
 
 <body class="body">
-    <header class="header">
-        <nav class="header__nav">
-            <a class="header__nav__brand" href="<?= get_home_url() ?>">Guillaume<br />Marteau</a>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="header__nav">
+                <a class="header__nav__brand" href="<?= get_home_url() ?>">Guillaume<br />Marteau</a>
 
-            <div class="toggler">
-                <span class="toggler__bar"></span>
-                <span class="toggler__bar"></span>
-                <span class="toggler__bar"></span>
-            </div>
+                <div class="toggler">
+                    <span class="toggler__bar"></span>
+                    <span class="toggler__bar"></span>
+                    <span class="toggler__bar"></span>
+                </div>
 
-            <div class="mainNav">
-                <ul class="mainNav__nav">
-                    <?php
-                    $items = wp_get_nav_menu_items('main-menu');
-                    $current_url = is_archive() ? get_post_type_archive_link('project') : get_permalink();
-                    foreach ($items as $item) :
-                    ?>
-                        <li class="mainNav__nav__item">
-                            <a href="<?= $item->url ?>" class="link <?= $item->url === $current_url ? 'active' : ''; ?>">
-                                <?= $item->title ?>
-                            </a>
-                        </li>
-                    <?php endforeach; ?>                  
-                </ul>
-            </div>
-        </nav>
-    </header>
+                <div class="mainNav">
+                    <ul class="mainNav__nav">
+                        <?php
+                        $items = wp_get_nav_menu_items('main-menu');
+                        $current_url = is_archive() ? get_post_type_archive_link('project') : get_permalink();
+                        foreach ($items as $item) :
+                        ?>
+                            <li class="mainNav__nav__item">
+                                <a href="<?= $item->url ?>" class="link <?= $item->url === $current_url ? 'active' : ''; ?>">
+                                    <?= $item->title ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>                  
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-    <main class="main">
+        <main class="main">

@@ -33,14 +33,20 @@ Description: Made for presenting my composition and sound design for short films
 .body {
   background-color: #FFFFF3;
   color: #153131;
-  display: flex;
-  flex-flow: row wrap;
   max-width: 100%;
   margin: 0;
   overflow-x: hidden !important;
 }
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden !important;
+}
 @media screen and (max-width: 992px) {
-  .body {
+  .wrapper {
     flex-flow: row nowrap;
   }
 }
