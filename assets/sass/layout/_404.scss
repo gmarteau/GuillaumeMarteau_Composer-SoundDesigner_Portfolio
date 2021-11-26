@@ -3,6 +3,16 @@
     flex-direction: column;
     align-items: center;
     padding-top: 5rem;
+    @include recentered-section;
+    & .title {
+        @include no-desktop {
+            width: 100%;
+            text-align: center;
+            &::after {
+                height: 0;
+            }
+        }
+    }
     &__redirect {
         text-decoration: none;
         color: $clr-dark;

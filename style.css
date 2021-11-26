@@ -957,6 +957,17 @@ p {
   flex-direction: column;
   align-items: center;
   padding-top: 5rem;
+  width: 90%;
+  margin: auto;
+}
+@media screen and (max-width: 992px) {
+  .fourofour .title {
+    width: 100%;
+    text-align: center;
+  }
+  .fourofour .title::after {
+    height: 0;
+  }
 }
 .fourofour__redirect {
   text-decoration: none;
