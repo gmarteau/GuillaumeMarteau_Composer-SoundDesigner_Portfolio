@@ -11,12 +11,17 @@
         animation: fade-in-up-keyframes $project-card-anim-time ease-in-out both;
         @include no-desktop {
             @include sm-screen-section;
+            margin-top: 2rem;
         }
     }
     &__img {
         width: 100%;
         height: 400px;
         animation: fade-in-up-keyframes $project-card-anim-time ease-in-out both;
+        @include no-desktop {
+            height: 200px;
+            margin-top: 3rem;
+        }
         &__pic {
             width: 100%;
             height: 100%;
@@ -39,6 +44,7 @@
             padding: 0;
             @include no-desktop {
                 flex-direction: column;
+                margin-top: 1rem;
             }
         }
     }

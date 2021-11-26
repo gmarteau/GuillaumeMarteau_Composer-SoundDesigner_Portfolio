@@ -1,7 +1,7 @@
 </main>
 
 <footer class="footer">
-    <ul class="nav nav--footer">
+    <ul class="nav">
         <?php
         $socials = wp_get_nav_menu_items('social');
         foreach ($socials as $social) :

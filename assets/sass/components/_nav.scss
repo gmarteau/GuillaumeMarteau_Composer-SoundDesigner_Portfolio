@@ -3,11 +3,20 @@
     list-style: none;
     padding: 0;
     justify-content: center;
+    @include no-desktop {
+        width: 80%;
+        margin: auto;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+    }
     &__item {
         color: $clr-text;
         margin-right: 1rem;
         &--footer {
             margin-left: 1rem;
+            @include no-desktop {
+                margin-bottom: 1rem;
+            }
         }
     }
 }

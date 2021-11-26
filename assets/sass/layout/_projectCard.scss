@@ -8,6 +8,10 @@
     width: 75%;
     margin: auto;
     margin-top: 50px;
+    @include no-desktop {
+        width: 100%;
+        margin-top: 0;
+    }
     &__double {
         width: 49%;
         height: $project-card-height;
@@ -15,6 +19,10 @@
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: $project-card-margin;
+        @include no-desktop {
+            @include recentered-section;
+            margin-bottom: $project-card-margin;
+        }
     }
 }
 
@@ -28,6 +36,10 @@
                 width: 100%;
                 height: math.div($project-card-height, 2);
                 margin-bottom: $project-card-margin;
+                @include no-desktop {
+                    @include recentered-section;
+                    margin-bottom: $project-card-margin;
+                }
             } @else if (($i == 2) or ($i == 3) or ($i == 5) or ($i == 6) or ($i == 10)) {
                 width: 100%;
                 height: math.div($project-card-height, 2) - $project-card-margin-half;
@@ -35,6 +47,11 @@
                 width: 49%;
                 height: $project-card-height;
                 margin-bottom: $project-card-margin;
+                @include no-desktop {
+                    @include recentered-section;
+                    margin-bottom: $project-card-margin;
+                    height: math.div($project-card-height, 2);
+                }
             }
         }
     }
@@ -84,5 +101,10 @@
     &--singleProject {
         width: 32%;
         animation: none;
+        @include no-desktop {
+            width: 100%;
+            margin-bottom: $project-card-margin;
+            height: 200px;
+        }
     }
 }

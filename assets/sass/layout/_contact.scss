@@ -4,19 +4,36 @@
     margin-bottom: 5rem;
     display: flex;
     animation: fade-in-up-keyframes $project-card-anim-time ease-out both;
+    @include no-desktop {
+        margin-top: 2rem;
+        margin-bottom: 0;
+        flex-wrap: wrap;
+    }
     &__title {
         animation: fade-in-up-keyframes $project-card-anim-time ease-out both;
     }
     &__text {
         width: 50%;
         padding-right: 6rem;
+        @include no-desktop {
+            width: 100%;
+            padding: 0;
+        }
         h2 {
             margin-top: 0;
             margin-bottom: 3rem;
             line-height: 1.5;
+            @include no-desktop {
+                margin-bottom: 0;
+                text-align: center;
+            }
         }
     }
     &__form {
         width: 50%;
+        @include no-desktop {
+            width: 100%;
+            margin-top: 2rem;
+        }
     }
 }

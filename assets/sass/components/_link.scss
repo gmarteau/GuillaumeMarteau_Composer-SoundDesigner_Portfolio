@@ -28,6 +28,9 @@
     }
     &.active {
         color: $clr-dark;
+        @include no-desktop {
+            color: $clr-text;
+        }
         &::after {
             transform: scaleX(1);
         }

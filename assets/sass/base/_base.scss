@@ -7,7 +7,8 @@
     color: $clr-text;
     display: flex;
     flex-flow: row wrap;
-    overflow-x: hidden;
+    max-width: 100%;
+    overflow-x: hidden!important;
     @include no-desktop {
         flex-flow: row nowrap;
     }
@@ -33,7 +34,8 @@
         order: 1;
         transform-origin: right;
         overflow-x: hidden;
-        margin-top: 8rem;
+        margin-top: 6rem;
+        margin-bottom: 150px;
         padding: 0;
     }
     &.menu-expanded {

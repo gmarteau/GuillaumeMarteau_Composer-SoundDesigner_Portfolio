@@ -2,5 +2,8 @@
     &__nav {
         margin-bottom: 4rem;
         animation: fade-in-up-keyframes $project-card-anim-time ease-out both;
+        @include no-desktop {
+            margin-bottom: 2rem;
+        }
     }
 }
