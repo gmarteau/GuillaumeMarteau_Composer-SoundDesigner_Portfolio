@@ -17,6 +17,10 @@
         display: flex;
         flex-direction: column;
         list-style: none;
+        @include no-desktop {
+            align-items: flex-end;
+            padding: 10%;
+        }
         &__item {
             margin-bottom: 2rem;
         }

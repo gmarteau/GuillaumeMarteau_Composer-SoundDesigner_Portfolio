@@ -13,8 +13,14 @@
     }
     &--big {
         font-size: 2.5em;
+        @include no-desktop {
+            font-size: 2em;
+        }
         &::after {
             height: 25px;
+            @include no-desktop {
+                height: 20px;
+            }
         }
     }
 }

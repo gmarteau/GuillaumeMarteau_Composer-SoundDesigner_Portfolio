@@ -10,7 +10,6 @@
         margin-bottom: 2rem;
         animation: fade-in-up-keyframes $project-card-anim-time ease-in-out both;
         @include no-desktop {
-            @include sm-screen-section;
             margin-top: 2rem;
         }
     }
