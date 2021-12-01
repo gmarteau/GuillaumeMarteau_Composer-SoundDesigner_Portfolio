@@ -41,7 +41,7 @@
         <?php $i = 1; ?>
         <?php while (have_posts()) : the_post() ?>
             <?= in_array($i, [2, 5, 10]) ? '<div class="projectGrid__double">' : '' ?>
-            <?= $i % 4 === 0 ? '</div>' : '' ?>
+            <?= in_array($i, [4, 7, 12]) ? '</div>' : '' ?>
             <?php get_template_part('template-parts/project/project-card', null, ['inc' => $i]); ?>
             <?php $i++; ?>
         <?php endwhile; ?>

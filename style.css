@@ -809,6 +809,7 @@ p {
 .projectCard--singleProject {
   width: 32%;
   animation: none;
+  height: 250px;
 }
 @media screen and (max-width: 992px) {
   .projectCard--singleProject {
@@ -934,6 +935,11 @@ p {
 }
 .contact__title {
   animation: fade-in-up-keyframes 1500ms ease-out both;
+}
+@media screen and (max-width: 992px) {
+  .contact__title {
+    margin-top: 2rem;
+  }
 }
 .contact__text {
   width: 50%;

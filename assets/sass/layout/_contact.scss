@@ -11,6 +11,9 @@
     }
     &__title {
         animation: fade-in-up-keyframes $project-card-anim-time ease-out both;
+        @include no-desktop {
+            margin-top: 2rem;
+        }
     }
     &__text {
         width: 50%;
