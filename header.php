@@ -14,7 +14,9 @@
     <div class="wrapper">
         <header class="header">
             <nav class="header__nav">
-                <a class="header__nav__brand" href="<?= get_home_url() ?>">Guillaume<br />Marteau</a>
+                <a class="header__nav__brand" href="<?= get_home_url() ?>">
+                    <img src="<?= get_template_directory_uri() . './assets/images/logo-01.png'; ?>" alt="Logo de Guillaume Marteau, ses deux initiales G et M sur fond coloré" class="header__nav__brand__img">
+                </a>
 
                 <div class="toggler">
                     <span class="toggler__bar"></span>

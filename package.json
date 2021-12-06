@@ -231,8 +231,8 @@
     "stylelint-config-wordpress": "^17.0.0"
   },
   "scripts": {
-    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/style-unprefixed.css --style compressed",
-    "prefix": "postcss ./assets/css/style-unprefixed.css --use autoprefixer -d ./assets/prefixed"
+    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/style.css --style compressed",
+    "prefix": "postcss ./assets/css/style.css --use autoprefixer -d ./assets/prefixed"
   },
   "repository": {
     "type": "git",
