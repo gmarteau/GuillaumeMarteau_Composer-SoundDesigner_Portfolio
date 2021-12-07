@@ -23,7 +23,7 @@ if (isset($_POST['submitted'])) {
     $message_value = esc_html(trim($_POST['message']));
     $message_error = '';
     if ($message_value === '') {
-        $message_error = 'Veuillez écire un contenu pour votre message';
+        $message_error = 'Veuillez écrire un contenu pour votre message';
         $has_error = true;
     }
 
