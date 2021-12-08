@@ -4,6 +4,13 @@
         animation: fade-in-up-keyframes $project-card-anim-time ease-out both;
         @include no-desktop {
             margin-bottom: 2rem;
+            margin-top: 2rem;
         }
     }
+}
+
+.nothing-to-show {
+    text-align: center;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
 }

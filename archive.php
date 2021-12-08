@@ -48,7 +48,7 @@
         <?= paginate_links(); ?>
     </div>
 <?php else : ?>
-    <p>Rien à voir pour le moment...</p>
+    <p class="nothing-to-show">Rien à voir pour le moment...</p>
 <?php endif; ?>
 
 <?php get_footer(); ?>
