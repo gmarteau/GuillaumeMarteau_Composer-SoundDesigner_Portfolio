@@ -40,7 +40,7 @@ function gmarteau_composer_init()
 {
     register_taxonomy('domain', 'project', [
         'labels' => [
-            'name' => 'Domaine',
+            'name' => 'Domaines',
             'singular_name' => 'Domaine',
             'plural_name' => 'Domaines',
             'search_items' => 'Rechercher des domaines',
@@ -62,7 +62,7 @@ function gmarteau_composer_init()
     ]);
     register_taxonomy('skill', 'project', [
         'labels' => [
-            'name' => 'Compétence',
+            'name' => 'Compétences',
             'singular_name' => 'Compétence',
             'plural_name' => 'Compétences',
             'search_items' => 'Rechercher des compétences',
@@ -84,7 +84,7 @@ function gmarteau_composer_init()
     ]);
     register_post_type('project', [
         'labels' => [
-            'name' => 'Projet',
+            'name' => 'Projets',
             'singular_name' => 'Projet',
             'plural_name' => 'Projets',
             'search_items' => 'Rechercher des projets',
